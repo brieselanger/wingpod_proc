@@ -39,9 +39,7 @@ There's an issue of allocating huge amounts of RAM during the processing, which 
 
 ### Actual Installation
 
-The installation process is rather simple. Just clone the repository:
-
-`git clone https://bitbucket.org/brieselanger/wingpod_proc/src/master/`
+Just clone the repository wherever you want it to be.
 
 To guarantee consistent and reproducible results, it is **recommended** to run the `test.py` script by prompting `python test.py` in a console after installation. A couple of `passed!` or `failed!` messages will show up, indicating if the results of the testdata processing is consistent with reference values stored in the `/testdata/testvar.py` file.
 
@@ -86,16 +84,16 @@ The following subdirectories are included:
 * `data/` - wind barb png's for kmz export and X-Plane test data (latter not in use).
 * `doc/` - master thesis and presentation in german which cover the physical/technical background.
 * `lib/` - several python functions. They are organized according their purpose (loading data, calculating wind, exporting etc.).
-* `script_graveyard/` - old (faulty) scripts went in there, not in use.
+* `script_graveyard/` - old scripts went in there, not in use.
 * `testdata/` - test data for test.py routine.
 * `tools/` - parser tool to split concatenated raw data files by looking for logger START/STOP statements (Bash shell only).
 ___
 
-## Known issues and To-Do's
+## Known issues and To-Do's (maybe...):
 
-* Calibration routines are still missing.
+* Calibration routines are not automated.
 * Way to much RAM gets allocated, if a high upsampling rate (upsmpl_rate >100) was selected or the raw data files are quite extensive (several hours of data). No investigation has been done so far in this regard.
-* Comma seperated output file is HUGE, compression takes ages. At least a formatted output would be nice to save as much symbols as possible.
+* Comma seperated output file is HUGE and compression takes ages. At least a formatted output would be nice to save as much symbols as possible.
 * Some sort of verbose output would be nice (processing time, mean values for wind components, plots, packages versions etc...).
 
 ___
