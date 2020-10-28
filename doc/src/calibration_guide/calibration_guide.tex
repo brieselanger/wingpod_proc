@@ -1,0 +1,218 @@
+\documentclass[a4paper]{article} % legt den Dokumenttyp fest\\
+\usepackage[utf8x]{inputenc} % legt fest, welche Sprach- und Zeichenpakete zur Darstellung des Textes verwendet werden sollen
+\usepackage[ngerman]{babel}
+\usepackage{amssymb} % Paket für mathematische Formeln
+\usepackage{amsmath}
+\usepackage{bm} % big math mode
+\usepackage[margin=10pt,font=small,labelfont=bf,textfont=it]{caption} %Caption-Formatierung
+\usepackage{wrapfig} % Text um Bild fließen lassen
+\usepackage{booktabs} % wissenschaftliche Tabellensätze
+\usepackage{geometry} % Seitenränder anpassen
+\usepackage{textcomp}
+\geometry{a4paper,left=35mm,right=35mm,top=25mm,bottom=25mm} % Seitenränder/Geometrie
+\usepackage{url}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{hyperref} % Einsetzen von klickbaren Links
+\usepackage{tcolorbox} %Colorbox
+\usepackage{tikz} % tikz package zum Erstellen von Vektorgraphiken
+\usetikzlibrary{shapes.arrows,decorations.pathreplacing}
+
+\title{Kalibrierungsleitfaden der 5-Hole-Probe}
+\author{Alexander Bütow}
+
+\begin{document}
+
+\maketitle
+
+\section{Allgemeines}
+
+Die \textbf{vollständige dynamische Kalibrierung} der 5-Hole-Probe (5HP) im Flug sollte idealerweise unter folgenden Umständen durchgeführt werden:
+
+\begin{itemize}
+	\item einmal jährlich (zur Validierung und ggf. Kompensation möglicher altersbedingter Änderungen der Linearität der Drucksensoren)
+	\item nach größeren, mechanischen Eingriffen an den Drucksensoren, der 5HP, IMU oder Druckschläuchen (Aus- und Einbau, Sensortausch)
+\end{itemize}
+
+Wichtig sind ebenfalls die meteorologischen Voraussetzungen. \textbf{Die Kalibrierung beruht auf den Annahmen eines zeitlich wie lokal stationären Horizontalwindfeldes, sowie des statischen Drucks und eine im Mittel verschwindene Vertikalgeschwindigkeit des Windes.} Daraus ergibt sich, dass das Kalibrierungsprogramm z.B. an der unmittelbaren Vorderseite einer sich nähernden Kaltfront bzw. Tiefdruckgebietes, inmitten einer synoptisch- oder mesoskaligen Konvergenzlinie, sowie eines kräftigen Hochs, möglichst nicht ausgeführt werden sollte.\\
+
+\textbf{Meteorologische Voraussetzungen:}
+
+\begin{itemize}
+	\item stabiles Wetter (hinsichtlich Drucktendenz, Windrichtung und -geschwindigkeit)
+	\item möglichst geringe vertikale Windgeschwindigkeit auf synoptischer Skala
+	\item Flug über planetarischer Grenzschicht möglich
+\end{itemize}
+
+
+\begin{tcolorbox}
+	Darüber hinaus sind \textbf{vor} und (optional) nach jedem Flug die Offsetwerte der Drucksensoren zu bestimmen. Das Verfahren wird im Folgenden erläutert und ist mit dieser Box gekennzeichnet.
+	
+\end{tcolorbox}
+
+\begin{tcolorbox}
+
+	\section{Vor und nach jedem Flug: Offsetwerte für Drucksensoren bestimmen}
+	
+	\textbf{Vor dem Flug:}
+	
+	\begin{itemize}
+		\item Sicherstellen, dass rote Schutzkappe auf der 5HP montiert ist
+		\item Zuschalten einer externen Spannungsquelle ans Flugzeug
+		\item Spannungsversorgung des Wingpods zuschalten
+		\item Logger für Drucksensoren starten (starten normalerweise automatisch nach anliegender Versorgungsspannung des Wingpods)
+		\item 15 bis 20 min als Warmup-Zeit vergehen lassen
+	\end{itemize}
+	
+	Die Druckmesswerte driften in ihre Nulllage; diese können im Postprocessing abgelesen werden.\\
+	
+	\textbf{(Nach dem Flug (Motor ist abgeschaltet)):}
+	
+	\begin{itemize}
+		\item rote Schutzkappe aufsetzen
+		\item Spannungsversorgung wiederherstellen (siehe oben)
+		\item 5 min vergehen lassen
+	\end{itemize}
+	
+	Erneut können die Messwerte im Postprocessing abgelesen werden. Die Werte nach dem Flug dienen zur Validierung.
+
+\end{tcolorbox}
+
+\newpage
+
+\section{Bestimmung des statischen Druckdefekts}
+
+Bei diesem Manöver wird die Fluggeschwindigkeit im Horizontalflug variiert.
+
+\begin{figure}[h!]
+	\centering
+		\begin{tikzpicture}[scale=1, baseline=(current bounding box.north)]
+		\draw[->,thick] (0,0) -- (0.5,0);
+		\draw[thick] (0.5,0) -- (1,0);
+		\node (pic) at (1,0.05) {\includegraphics[scale=0.07,angle=20]{./docmedia/airplane_side.png}};
+		\node[below] at (pic) {\tiny $v_{ias} \gtrsim v_{Stall}$};
+		\draw[thick] (1,0) -- (3.5,0);
+		\node (pic2) at (3.5,0.05) {\includegraphics[scale=0.07,angle=-5]{./docmedia/airplane_side.png}};
+		\node[below] at (pic2) {\tiny $v_{ias} \lesssim v_{NE}$};
+		\draw[->,thick] (3.5,0) -- (4,0);
+		\end{tikzpicture}
+		\caption{Variation der angezeigten Fluggeschwindigkeit $v_{ias}$ (Seitenansicht).}
+\end{figure}
+
+\begin{itemize}
+	\item über die turbulente Grenzschicht aufsteigen bzw. sicherstellen, dass keine Turbulenz spürbar ist
+	\item Horizontalflug einnehmen
+	\item Flughöhe fortwährend konstant halten
+	\item angezeigte Fluggeschwindigkeit $v_{ias}$ mit Hilfe der Motorleistung langsam zwischen Strömungs\-abrissgeschwindigkeit $v_{Stall}$ und Höchstgeschwindigkeit\footnote{Höchstgeschwindigkeit, die mit Motorbetrieb im Horizontalflug erreichbar ist, ansonsten nahe $v_{NE}$.} variieren
+	\item Wiederholungen: 5 bis 10
+\end{itemize}
+
+\section{Kalibrierung des Anstellwinkels}
+
+Bei diesem Manöver geht es darum, den Anstellwinkel\footnote{Der Anstellwinkel bezieht sich auf die Anströmung, nicht auf den Horizont ($\theta$, \textit{Attitude}).} ($\alpha$, \textit{Pitch}) dynamisch durch wechselnde Flächenbelastungen zu alternieren.
+
+\begin{figure}[h!]
+			\centering
+			\begin{tikzpicture}[scale=1, baseline=(current bounding box.north)]
+			\draw[->,thick] (0,0) sin(1,.2);
+			\draw[->,thick] (1,.2) cos(2,0) sin(3,-.2) cos(4,0) sin(5,.2) cos(6,0) sin(7,-.2) cos(8,0);
+			\node (pic) at (2,0) {\includegraphics[scale=0.07,angle=-10]{./docmedia/airplane_side.png}};
+			\node (pic2) at (5,.25) {\includegraphics[scale=0.07,angle=5]{./docmedia/airplane_side.png}};
+			\draw [decorate,decoration={brace,amplitude=5pt,raise=5pt,mirror},yshift=0pt](1,-0.5) -- (5,-0.5) node [black,midway,yshift=-0.5cm] {\tiny$\approx 5$ s};
+			\end{tikzpicture}
+			\caption{Oszillation des Anstellwinkels $\alpha$ (Seitenansicht).}
+\end{figure}
+
+\begin{itemize}
+	\item über die turbulente Grenzschicht aufsteigen bzw. sicherstellen, dass keine Turbulenz spürbar ist
+	\item kurz Horizontalflug einnehmen
+	\item Ausführen möglichst sinusförmiger Oszillationen um die Querachse ($\pm 10^\circ$), Periodendauer ca. 5 s oder kürzer
+	\item Wiederholungen: 10 bis 20
+\end{itemize}
+
+\newpage
+
+\section{Kalibrierung des Gierwinkels}
+
+Ähnlich wie im voherigen Manöver, stattdessen wird der Gierwinkel alterniert.
+
+\begin{figure}[h!]
+	\centering
+	\begin{tikzpicture}[scale=1, baseline=(current bounding box.north)]
+	\draw[->,thick] (0,0) -- (1,0);
+	\draw[->,thick] (1,0) -- (6,0);
+	\node (pic) at (1.5,0) {\includegraphics[scale=0.07,angle=-75]{./docmedia/airplane_top.png}};
+	\node (pic2) at (3,0) {\includegraphics[scale=0.07,angle=-105]{./docmedia/airplane_top.png}};
+	\node (pic3) at (4.5,0) {\includegraphics[scale=0.07,angle=-75]{./docmedia/airplane_top.png}};
+	\draw [decorate,decoration={brace,amplitude=5pt,raise=5pt,mirror},yshift=0pt](1.5,-.3) -- (4.5,-.3) node [black,midway,yshift=-0.5cm] {\tiny$\approx 5$ s};
+	\end{tikzpicture}
+	\caption{Oszillation des Gierwinkels $\beta$ (Draufsicht).}
+\end{figure}
+
+\begin{itemize}
+	\item über die turbulente Grenzschicht aufsteigen bzw. sicherstellen, dass keine Turbulenz spürbar ist
+	\item kurz Horizontalflug einnehmen
+	\item Ausführen möglichst sinusförmiger Oszillationen um die Gierachse ($\pm 10^\circ$), Periodendauer ca. 5 s
+	\item Flügel horizontal halten (Quer- und Seitenruder kreuzen)
+	\item Wiederholungen: 10 bis 20
+\end{itemize}
+
+\section{Bestimmung der Offsetwinkel $\alpha_0$ und $\beta_0$ und Validierung des statischen Druckdefekts}
+
+Bei diesem Manöver wird ein \textit{Heading} in wechselnder Richtung (\textit{Reverse-Heading-Maneuver}) oder alternativ ein Quadrats (parallel zu Haupthimmelsrichtungen) abgeflogen.
+
+\begin{figure}[h!]
+	\centering
+		\begin{subfigure}{0.25\textwidth}
+			\begin{tikzpicture}[scale=0.5, baseline=(current bounding box.north)]
+			\tikzstyle{every node}=[font=\scriptsize]
+			\node[rotate=-60] (airplane) at (0,0) {\includegraphics[scale=0.07]{./docmedia/airplane_top.png}};
+			\draw[->,thick, rotate=-60] (0,0) -- (0,5);
+			\draw[->,thick, rotate=-60] (0,5) arc (0:45:1.6) coordinate (leg);
+			\draw[thick,rotate=-60] (leg) arc (45:-180:-0.3) -- (0,5);
+			\draw[->,thick, rotate=-60] (0,5) -- (0,1);
+			\draw[->,thick, rotate=-60] (0,0) arc (0:45:-1.6) coordinate (leg2);
+			\draw[thick,rotate=-60] (leg2) arc (45:-180:0.3) -- (0,0);
+			
+			\draw[->, >=latex, blue!40, line width=7pt, rotate=-150] (-3,3) -- node [black,rotate=-60] {Wind} (-3,0.2);
+			\draw [decorate,decoration={brace,amplitude=5pt,raise=5pt},yshift=10pt,rotate=-60] (0,0) -- (0,5) node [black,midway,xshift=-10pt,yshift=10pt,rotate=30] {\tiny$\approx 30 - 60$ s};
+			\end{tikzpicture}
+			\caption{}
+		\end{subfigure}
+		\hspace{2cm}
+		\begin{subfigure}{0.25\textwidth}
+			\begin{tikzpicture}[scale=1, baseline=(current bounding box.north)]
+			\tikzstyle{every node}=[font=\scriptsize]
+			\node (start) at (0,0) {\includegraphics[scale=0.07]{./docmedia/airplane_top.png}};
+			\draw[thick] (start) -- (0,2) coordinate (leg1_e);
+			\draw[thick] (leg1_e) arc(0:90:0.5) coordinate (leg2_b);	
+			\draw[->,thick] (leg2_b) -- (-2.5,2.5) coordinate (leg2_e);
+			\draw[thick] (leg2_e) arc(90:180:0.5) coordinate (leg3_a);
+			\draw[thick] (leg3_a) -- (-3,0) coordinate (leg3_e);
+			\draw[thick] (leg3_e) arc(180:270:0.5) coordinate (leg4_a);
+			\draw[->,thick] (leg4_a) -- (-0.5,-0.5) coordinate (leg4_e);
+			\draw[thick] (leg4_e) arc(270:360:0.5);
+			
+			%\draw[->, >=latex, blue!40, line width=7pt] (-1.5,2) -- node [black,rotate=90] {Wind} (-1.5,0);
+			%\draw [decorate,decoration={brace,amplitude=5pt,mirror,raise=5pt},yshift=0pt](-2.5,-0.5) -- (-0.5,-0.5) node [black,midway,yshift=-0.5cm] {\tiny$\approx 30 - 60$ s};
+			\end{tikzpicture}
+			\caption{}
+		\end{subfigure}
+	\caption{Abwechselndes Fliegen eines Headings (a) oder eines Vierecks (b).}
+\end{figure}
+
+\begin{itemize}
+	\item über die turbulente Grenzschicht aufsteigen (Alternativ: tiefer Flug über Grund, sofern Grundschichtkonvektion noch nicht stark entwickelt ist)
+	\item Höhe und Geschwindigkeit fortwährend halten
+	\item \textit{Heading} parallel zur Windrichtung (Alternativ: 0$^\circ$, 90$^\circ$, 180$^\circ$ oder 270$^\circ$) ausrichten
+	\item \textit{Heading} 30 bis 60 s halten
+	\item 180$^{\circ}$-Wende durchführen bzw. $90^\circ$ beim Abfliegen eines Vierecks
+	\item neues \textit{Heading} für die gleiche gewählte Zeit des voherigen Abschnitts halten
+	\item 180$^{\circ}$-Wende durchführen bzw. $90^\circ$
+	\item Wiederholungen: 5 bis 10
+\end{itemize}
+
+Am besten werden die Manöver nicht an ortsgebunden Wendepunkten festgemacht, d.h. der horizontale Windversatz des Flugzeugs während der Durchführung ist sogar \textbf{erwünscht}, da es sich so immer in der gleichen Luftmasse bewegt. Es reicht also aus, nach Uhr und Kompass zu fliegen.
+
+\end{document}

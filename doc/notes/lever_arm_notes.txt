@@ -1,0 +1,22 @@
+All units in meter, based on rotated IMU coordination system
+
+x-values:
+
+Wingpod bis rechte RUmpfseite: 3.00
+Rechte Flügelspitze bis Wingpod: 4.35
+Linke Flügelspitze bis linke Rumpfseite: 7.47
+Breite Kabine: 1.03
+
+--> Linke FLügelspitze bis Wingpod: -11.50
+--> Rechte Flügelspitze bis Wingpod: 4.35
+
+y-Werte:
+--> rechte GPS-Antenne: 0.0
+--> linke GPS-Antenne: -0.1
+
+z-Werte:
+GPS-Antennen über Grund: 1.196
+Wingpod über Grund: 0.656
+
+--> linke und rechte GPS-Antenne: -0.54
+

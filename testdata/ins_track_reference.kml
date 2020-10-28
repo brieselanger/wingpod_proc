@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
+    <Document id="feat_1">
+        <Style id="stylesel_0">
+            <LineStyle id="substyle_0">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+            </LineStyle>
+        </Style>
+        <open>1</open>
+        <Placemark id="feat_2">
+            <name>Pfad 1</name>
+            <styleUrl>#stylesel_0</styleUrl>
+            <LineString id="geom_0">
+                <coordinates>12.924729933210001,53.963234885220004,1995.8715 12.92209326086,53.96440243109,1997.0675 12.919456003199999,53.9655621985,1999.1137 12.916812178369998,53.966712091450006,2000.4142 12.91413947901,53.967839332859995,2001.6116 12.91142469122,53.9689342781,2002.3637 12.90868658316,53.97002962256,2002.9692 12.90596597836,53.971169958990004,2003.7858 12.903289677939998,53.97236377228,2005.27 12.90062682131,53.973583579679996,2005.537 12.89792410556,53.97476455062,2008.1913 12.8952006722,53.97590711,2009.8886 12.89254577484,53.97709921613,2012.2263 12.890009054360002,53.97841982664001,2012.594 12.88746242132,53.979772375299994,2012.2916 12.88480906028,53.98103454958,2013.8139 12.882048859549998,53.98217108592999,2015.5544 12.87924500954,53.98324920957,2016.856 12.87646712913,53.98433845144,2020.014 12.87372013381,53.98545200668,2023.278 12.87095699347,53.98654870038,2024.6572 12.868189150569998,53.98764825007,2029.5489 12.865528177,53.98879491128,2035.3533 12.8628698773,53.989927977019995,2038.9137 12.860230884889999,53.991071046230005,2042.2233 12.85756499889,53.99222397808,2040.9404 12.854872615680002,53.9934272182,2039.9556 12.85213422012,53.99462869231,2039.8412 12.84934749613,53.995798887650004,2040.8524 12.84657443052,53.996993694820006,2040.7567 12.843803000310002,53.99823201674,2038.8162 12.841016793069999,53.999507744309994,2036.7059 12.838194144200001,54.00075517789001,2036.078 12.83537031139,54.00200257784,2035.1106 12.832551231370001,54.00327084238,2033.9876 12.829730390999998,54.00452700964001,2034.6371</coordinates>
+                <extrude>1</extrude>
+                <altitudeMode>relativeToGround</altitudeMode>
+            </LineString>
+        </Placemark>
+        <Placemark id="feat_3">
+            <name>Start: 1018z</name>
+            <Point id="geom_1">
+                <coordinates>12.924729933210001,53.963234885220004,1995.8715</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="feat_4">
+            <name>Stop: 1021z</name>
+            <Point id="geom_2">
+                <coordinates>12.82694017819,54.00575388622,2035.2847</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="feat_5">
+            <name>1018z</name>
+            <description>Time: 1018 z
+
+        Height: 1995.9 m
+        u_p: -34.6 m/s
+        v_p: 26.1 m/s
+        w_p: 0.3 m/s
+        Speed: 43.3 m/s
+        Azimuth: 299.0 deg
+        Roll: -5.4 deg
+        Pitch: -6.0 deg
+        INS status: 3
+        
+        INS status legend:
+            0: 'INS_INACTIVE'
+            1: 'INS_ALIGNING'
+            2: 'INS_HIGH_VARIANCE'
+            3: 'INS_SOLUTION_GOOD'
+            6: 'INS_SOLUTION_FREE'
+            7: 'INS_ALIGNMENT_COMPLETE'
+            8: 'DETERMINING_ORIENTIATION'
+            9: 'WAITING_INITIALPOS'
+        </description>
+            <Point id="geom_3">
+                <coordinates>12.924729933210001,53.963234885220004,1995.8715</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="feat_6">
+            <name>1018z</name>
+            <description>Time: 1018 z
+
+        Height: 2000.4 m
+        u_p: -34.9 m/s
+        v_p: 25.4 m/s
+        w_p: 0.2 m/s
+        Speed: 43.2 m/s
+        Azimuth: 297.6 deg
+        Roll: -5.6 deg
+        Pitch: -6.0 deg
+        INS status: 3
+        
+        INS status legend:
+            0: 'INS_INACTIVE'
+            1: 'INS_ALIGNING'
+            2: 'INS_HIGH_VARIANCE'
+            3: 'INS_SOLUTION_GOOD'
+            6: 'INS_SOLUTION_FREE'
+            7: 'INS_ALIGNMENT_COMPLETE'
+            8: 'DETERMINING_ORIENTIATION'
+            9: 'WAITING_INITIALPOS'
+        </description>
+            <Point id="geom_4">
+                <coordinates>12.916812178369998,53.966712091450006,2000.4142</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="feat_7">
+            <name>1018z</name>
+            <description>Time: 1018 z
+
+        Height: 2003.0 m
+        u_p: -35.9 m/s
+        v_p: 24.8 m/s
+        w_p: 0.2 m/s
+        Speed: 43.6 m/s
+        Azimuth: 296.9 deg
+        Roll: -3.8 deg
+        Pitch: -6.4 deg
+        INS status: 3
+        
+        INS status legend:
+            0: 'INS_INACTIVE'
+            1: 'INS_ALIGNING'
+            2: 'INS_HIGH_VARIANCE'
+            3: 'INS_SOLUTION_GOOD'
+            6: 'INS_SOLUTION_FREE'
+            7: 'INS_ALIGNMENT_COMPLETE'
+            8: 'DETERMINING_ORIENTIATION'
+            9: 'WAITING_INITIALPOS'
+        </description>
+            <Point id="geom_5">
+                <coordinates>12.90868658316,53.97002962256,2002.9692</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="feat_8">
+            <name>1019z</name>
+            <description>Time: 1019 z
+
+        Height: 2005.5 m
+        u_p: -35.2 m/s
+        v_p: 26.9 m/s
+        w_p: 0.2 m/s
+        Speed: 44.3 m/s
+        Azimuth: 298.9 deg
+        Roll: -6.1 deg
+        Pitch: -6.2 deg
+        INS status: 3
+        
+        INS status legend:
+            0: 'INS_INACTIVE'
+            1: 'INS_ALIGNING'
+            2: 'INS_HIGH_VARIANCE'
+            3: 'INS_SOLUTION_GOOD'
+            6: 'INS_SOLUTION_FREE'
+            7: 'INS_ALIGNMENT_COMPLETE'
+            8: 'DETERMINING_ORIENTIATION'
+            9: 'WAITING_INITIALPOS'
+        </description>
+            <Point id="geom_6">
+                <coordinates>12.90062682131,53.973583579679996,2005.537</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="feat_9">
+            <name>1019z</name>
+            <description>Time: 1019 z
+
+        Height: 2012.2 m
+        u_p: -34.0 m/s
+        v_p: 27.9 m/s
+        w_p: 0.3 m/s
+        Speed: 44.0 m/s
+        Azimuth: 300.2 deg
+        Roll: 0.3 deg
+        Pitch: -6.2 deg
+        INS status: 3
+        
+        INS status legend:
+            0: 'INS_INACTIVE'
+            1: 'INS_ALIGNING'
+            2: 'INS_HIGH_VARIANCE'
+            3: 'INS_SOLUTION_GOOD'
+            6: 'INS_SOLUTION_FREE'
+            7: 'INS_ALIGNMENT_COMPLETE'
+            8: 'DETERMINING_ORIENTIATION'
+            9: 'WAITING_INITIALPOS'
+        </description>
+            <Point id="geom_7">
+                <coordinates>12.89254577484,53.97709921613,2012.2263</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="feat_10">
+            <name>1019z</name>
+            <description>Time: 1019 z
+
+        Height: 2013.8 m
+        u_p: -35.6 m/s
+        v_p: 26.7 m/s
+        w_p: 0.4 m/s
+        Speed: 44.5 m/s
+        Azimuth: 298.3 deg
+        Roll: -8.3 deg
+        Pitch: -6.0 deg
+        INS status: 3
+        
+        INS status legend:
+            0: 'INS_INACTIVE'
+            1: 'INS_ALIGNING'
+            2: 'INS_HIGH_VARIANCE'
+            3: 'INS_SOLUTION_GOOD'
+            6: 'INS_SOLUTION_FREE'
+            7: 'INS_ALIGNMENT_COMPLETE'
+            8: 'DETERMINING_ORIENTIATION'
+            9: 'WAITING_INITIALPOS'
+        </description>
+            <Point id="geom_8">
+                <coordinates>12.88480906028,53.98103454958,2013.8139</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="feat_11">
+            <name>1019z</name>
+            <description>Time: 1019 z
+
+        Height: 2020.0 m
+        u_p: -36.2 m/s
+        v_p: 24.6 m/s
+        w_p: 0.8 m/s
+        Speed: 43.8 m/s
+        Azimuth: 295.9 deg
+        Roll: -4.0 deg
+        Pitch: -5.9 deg
+        INS status: 3
+        
+        INS status legend:
+            0: 'INS_INACTIVE'
+            1: 'INS_ALIGNING'
+            2: 'INS_HIGH_VARIANCE'
+            3: 'INS_SOLUTION_GOOD'
+            6: 'INS_SOLUTION_FREE'
+            7: 'INS_ALIGNMENT_COMPLETE'
+            8: 'DETERMINING_ORIENTIATION'
+            9: 'WAITING_INITIALPOS'
+        </description>
+            <Point id="geom_9">
+                <coordinates>12.87646712913,53.98433845144,2020.014</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="feat_12">
+            <name>1020z</name>
+            <description>Time: 1020 z
+
+        Height: 2029.5 m
+        u_p: -35.4 m/s
+        v_p: 25.4 m/s
+        w_p: 2.2 m/s
+        Speed: 43.6 m/s
+        Azimuth: 298.0 deg
+        Roll: -1.4 deg
+        Pitch: -4.6 deg
+        INS status: 3
+        
+        INS status legend:
+            0: 'INS_INACTIVE'
+            1: 'INS_ALIGNING'
+            2: 'INS_HIGH_VARIANCE'
+            3: 'INS_SOLUTION_GOOD'
+            6: 'INS_SOLUTION_FREE'
+            7: 'INS_ALIGNMENT_COMPLETE'
+            8: 'DETERMINING_ORIENTIATION'
+            9: 'WAITING_INITIALPOS'
+        </description>
+            <Point id="geom_10">
+                <coordinates>12.868189150569998,53.98764825007,2029.5489</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="feat_13">
+            <name>1020z</name>
+            <description>Time: 1020 z
+
+        Height: 2042.2 m
+        u_p: -34.7 m/s
+        v_p: 25.4 m/s
+        w_p: 0.2 m/s
+        Speed: 43.0 m/s
+        Azimuth: 297.5 deg
+        Roll: -5.1 deg
+        Pitch: -6.4 deg
+        INS status: 3
+        
+        INS status legend:
+            0: 'INS_INACTIVE'
+            1: 'INS_ALIGNING'
+            2: 'INS_HIGH_VARIANCE'
+            3: 'INS_SOLUTION_GOOD'
+            6: 'INS_SOLUTION_FREE'
+            7: 'INS_ALIGNMENT_COMPLETE'
+            8: 'DETERMINING_ORIENTIATION'
+            9: 'WAITING_INITIALPOS'
+        </description>
+            <Point id="geom_11">
+                <coordinates>12.860230884889999,53.991071046230005,2042.2233</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="feat_14">
+            <name>1020z</name>
+            <description>Time: 1020 z
+
+        Height: 2039.8 m
+        u_p: -36.4 m/s
+        v_p: 26.2 m/s
+        w_p: 0.1 m/s
+        Speed: 44.8 m/s
+        Azimuth: 297.6 deg
+        Roll: -6.4 deg
+        Pitch: -6.6 deg
+        INS status: 3
+        
+        INS status legend:
+            0: 'INS_INACTIVE'
+            1: 'INS_ALIGNING'
+            2: 'INS_HIGH_VARIANCE'
+            3: 'INS_SOLUTION_GOOD'
+            6: 'INS_SOLUTION_FREE'
+            7: 'INS_ALIGNMENT_COMPLETE'
+            8: 'DETERMINING_ORIENTIATION'
+            9: 'WAITING_INITIALPOS'
+        </description>
+            <Point id="geom_12">
+                <coordinates>12.85213422012,53.99462869231,2039.8412</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="feat_15">
+            <name>1020z</name>
+            <description>Time: 1020 z
+
+        Height: 2038.8 m
+        u_p: -36.4 m/s
+        v_p: 28.4 m/s
+        w_p: -0.6 m/s
+        Speed: 46.2 m/s
+        Azimuth: 297.8 deg
+        Roll: -3.3 deg
+        Pitch: -7.4 deg
+        INS status: 3
+        
+        INS status legend:
+            0: 'INS_INACTIVE'
+            1: 'INS_ALIGNING'
+            2: 'INS_HIGH_VARIANCE'
+            3: 'INS_SOLUTION_GOOD'
+            6: 'INS_SOLUTION_FREE'
+            7: 'INS_ALIGNMENT_COMPLETE'
+            8: 'DETERMINING_ORIENTIATION'
+            9: 'WAITING_INITIALPOS'
+        </description>
+            <Point id="geom_13">
+                <coordinates>12.843803000310002,53.99823201674,2038.8162</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="feat_16">
+            <name>1021z</name>
+            <description>Time: 1021 z
+
+        Height: 2035.1 m
+        u_p: -36.8 m/s
+        v_p: 28.3 m/s
+        w_p: -0.3 m/s
+        Speed: 46.4 m/s
+        Azimuth: 297.5 deg
+        Roll: -4.1 deg
+        Pitch: -6.9 deg
+        INS status: 3
+        
+        INS status legend:
+            0: 'INS_INACTIVE'
+            1: 'INS_ALIGNING'
+            2: 'INS_HIGH_VARIANCE'
+            3: 'INS_SOLUTION_GOOD'
+            6: 'INS_SOLUTION_FREE'
+            7: 'INS_ALIGNMENT_COMPLETE'
+            8: 'DETERMINING_ORIENTIATION'
+            9: 'WAITING_INITIALPOS'
+        </description>
+            <Point id="geom_14">
+                <coordinates>12.83537031139,54.00200257784,2035.1106</coordinates>
+            </Point>
+        </Placemark>
+    </Document>
+</kml>

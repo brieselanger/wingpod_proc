@@ -1,0 +1,157 @@
+[2019/02/10]
+Changes for last commit of this date:
+
+- updated static defect calibration routines
+
+[2019/01/24]
+Changes for last commit of this date:
+
+- changed directory handling: raw input files have to be put
+	into the 'in/' directory. Output will be saved into
+	the 'out/' directory.
+
+- removed unused routines in flow angle calibration guide,
+	still not finished
+
+[2018/12/10]
+Changes for last commit of this date:
+
+- added .tex sources for calibration guide and presentation
+- added a_priori_const.py file in calibration subdir, used
+	as 'starting point' for the whole calibration process
+
+- minor change in calibration guide (calibration-square parallel
+	to main cardinal directions)
+- revised static defect calibration routines
+
+- removed unused const.py files in calibration subdir
+
+[2018/11/26]
+Changes for last commit of this date:
+
+- added documentation (README and thesis)
+- added calibration routines (not tested yet!)
+
+- removed some unused things
+
+[2018/10/12]
+Changes for last commit of this date:
+
+- minor fixes regarding the test routine
+
+[2018/10/09]
+Changes for last commit of this date:
+
+- Updated test procedure so that the user can check
+	the calculation results for consistency 
+
+[2018/10/08]
+Changes for last commit of this date:
+
+- fixed a bug which occured in pandas v0.23.4
+
+[2018/08/27]
+Changes for last commit of this date:
+
+- added constant to compensate dynamic pressure errors
+
+- updated coefficients
+
+[2018/08/20]
+Changes for last commit of this date:
+
+- added INS status legend in exported kml file
+
+- changed (increased) pins density in kml file
+
+[2018/08/15]
+Changes for last commit of this date:
+
+- fixed wind barbs showing wrong wind directions (180 deg) in exported
+	kmz file
+- fixed temperature and dewpoint units in exported kmz file.
+
+- added file parser for raw data files. Pressure data files can be plotted
+	to decide with ease, which files may contain actual flight data.
+
+[2018/06/14]
+Changes since last commit:
+
+- fixed small bug in the master timestamp generation. the desired
+	upsampled frequency was not equal as specified in the configuration.
+- fixed missing old main.py, which wasn't updated in the last commit
+
+[2018/06/13]
+Changes since last commit:
+
+- added calculation of meteorological values (potential temperature,
+	equivalent potential temperature (also known as Theta_e),
+	virtual temperature, air density)
+- added calculation of indicated airspeed
+- added SI converation just after raw data loading to eliminate the
+	SI/non-SI mess. Configurable constants where left in userfriendly
+	non-SI values, though (for example: temperature in °C instead of K).
+
+- removed unused load_mevis function in the load_data.py collection
+
+The output was tested for consistency using the proposed testdata
+
+Known issues/to do:
+- split unix timestamps somehow. After upsampling, the timestamp values are
+	so big that they suffer precision losses because of limited float
+	precision. This causes a very small but disturbing artificial jitter
+	in the output timestamp values. One way to address this problem is to
+	split the UNIX time of the reference day at 00:00 UTC and the seconds
+	thereafter.
+
+[2018/06/10]
+Changes since last commit:
+
+- added testdata files and description, contained in the ./testdata directory
+
+[2018/05/25]
+Changes since last commit:
+
+- fixed turning rates and acceleration values which were in rad/s/sample and
+  	m/s/sample for the internal IMU sampling rate (125 Hz)
+- fixed sign for angular velocities
+- finally added the correction constants obtained from calibration maneuvers
+
+- some tiny syntax fixes here and there
+
+This release is presumed to be the final version to use the windpod-proc
+	package operationally.
+	However, the results were'nt discussed very profoundly
+	yet, therefore, the correction algorithm might change in the
+	future. There is still some ucertainty, if the (measureable) static
+	defect caused by flow angle deflection should be properly corrected
+	and implemented.
+
+[2018/04/23]
+Changes since last commit:
+
+- fixed path to the wind-barbs directory
+- fixed and tested csv-export for processed output-data. Takes ages...but works.
+- fixed the unintentionally deactivated inclusion of boom lenght in the wind
+  	calculation
+
+- added offset correction for pressure sensores in order to re-zero them
+- added dynamic correction for static and dynamic pressure measurements
+- added response time offset for pressure sensors
+- added time range selection option in the configuration
+- added output directory option for data exports
+
+- removed AD conversation lag subtraction of pressure sensor timestamps
+
+- some comments have been revised
+- code is more consistently regarding code convetions. Not 100% hardcore
+       pythonian, though.
+
+
+Known issues:
+- jumps in timestamps can be problematic and leed to errors in the preprocessing
+  	part. This can be bypassed manually by removing timestamp jumps in raw
+	data files. Keeping a consistant timestamp in raw data files saves time
+	consuming manupulation of them.
+- huge amounts of RAM get allocated, package may not be usable on machines with
+	low end memory space (4 GB or less).
